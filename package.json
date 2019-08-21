@@ -1,22 +1,31 @@
 {
   "name": "hello-node",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
+    "start2": "ts-node-dev --respawn ./src/index.ts",
     "start": "nodemon --watch src/**/*.ts --exec ts-node src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tsc && node ./dist/index.js",
+    "build": "build:win",
+    "build:win": "tsc && pkg ./dist/index.js --target node10-win-x64",
+    "build:mac": "tsc && pkg ./dist/index.js --target node10-mac-x64",
+    "build:lnx": "tsc && pkg ./dist/index.js --target node10-linux-x64"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Michael May",
+  "license": "MIT",
   "devDependencies": {
+    "@types/configstore": "^4.0.0",
+    "@types/figlet": "^1.2.0",
+    "@types/minimist": "^1.2.0",
     "nodemon": "^1.19.1",
     "pkg": "^4.4.0",
     "ts-node": "^8.3.0",
+    "ts-node-dev": "^1.0.0-pre.41",
     "typescript": "^3.5.3"
   },
   "dependencies": {
+    "chalk": "^2.4.2",
     "configstore": "^5.0.0",
+    "figlet": "^1.2.3",
     "minimist": "^1.2.0"
   }
 }

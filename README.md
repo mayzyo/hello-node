@@ -10,8 +10,11 @@ Ideal scenarios for use:
 ## Extra Dependencies Used
 * Config Store
 * Minimist
-* Pkg
+* Chalk
+* Figlet
 
 ## Useful Resources
+pkg - https://github.com/zeit/pkg
+
 Javascript Commandline Interface CLI
 https://www.sitepoint.com/javascript-command-line-interface-cli-node-js/
