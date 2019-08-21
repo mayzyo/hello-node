@@ -11,10 +11,13 @@ Ideal scenarios for use:
 * Config Store
 * Minimist
 * Chalk
-* Figlet
+* Ascii Text Generator
 
 ## Useful Resources
 pkg - https://github.com/zeit/pkg
 
 Javascript Commandline Interface CLI
 https://www.sitepoint.com/javascript-command-line-interface-cli-node-js/
+
+## Note
+* Figlet didn't work when packaged using pkg, both sync and async would immediately terminate the app
